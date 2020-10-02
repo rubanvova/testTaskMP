@@ -47,10 +47,7 @@ const App = () => {
         return null;
       }
       if (checkbox === true) {
-        return (
-          i.toLowerCase().search(eventInput) !== -1 ||
-          i.toUpperCase().search(eventInput) !== -1
-        );
+        return i.toLowerCase().search(eventInput.toLowerCase()) !== -1;
       } else {
         return i.search(eventInput) !== -1;
       }
