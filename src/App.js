@@ -42,7 +42,7 @@ const App = () => {
   const classes = useStyles();
 
   const filterStringsSubstring = () => {
-    const result = strings[0].data.filter((i) => {
+    const result = (strings[0] || []).data.filter((i) => {
       if (eventInput === "") {
         return null;
       }
@@ -56,17 +56,13 @@ const App = () => {
   };
 
   const filterStringsByLength = () => {
-    const result = strings[0].data.filter((i) => {
+    const result = (strings[0] || []).data.filter((i) => {
       if (eventInput === "") {
         return null;
       }
       return Number(eventInput) < i.length;
     });
     setShowResalut(result);
-  };
-
-  const onChangeInput = (e) => {
-    setEventInput(e.target.value);
   };
 
   return (
@@ -103,13 +99,12 @@ const App = () => {
             <Input
               className={classes.input}
               type="text"
-              onChange={onChangeInput}
+              onChange={(e) => setEventInput(e.target.value)}
               placeholder="Lead the text"
             />
           </Box>
         </Box>
       </Paper>
-
       <Box mt={5}>
         <TableData data={showResalut} />
       </Box>
