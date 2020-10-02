@@ -49,7 +49,7 @@ export const TableData = ({ data }) => {
                 {row}
               </TableCell>
               <TableCell style={{ width: 160 }} align="right">
-                {row.length} lenght
+                {row.length} length
               </TableCell>
               <TableCell style={{ width: 160 }} align="right">
                 {row.search(/[A-Z]+/g) ? "LowerCase" : "UpperCase"}
