@@ -1,0 +1,31 @@
+/* .App {
+  margin: 0 auto;
+  padding-top: 25px;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.input {
+  padding: 8px;
+  margin: 10px;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background-color: rgba(235, 230, 230, 0.205);
+}
+
+.buttons {
+  height: 100px;
+  width: 210px;
+  background-color: rgba(235, 230, 230, 0.562);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.buttons button {
+  display: flex;
+  margin: 5px;
+} 
